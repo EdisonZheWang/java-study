@@ -1,6 +1,8 @@
-package com.everest.ioc.init;
+package com.everest.ioc.config;
 
+import com.everest.ioc.pojo.Dog;
 import com.everest.ioc.pojo.Person;
+import com.everest.ioc.pojo.Pet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +15,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.everest")
 public class InitConfig {
 
-	@Bean
-	public Person person() {
-		return new Person();
-	}
 }

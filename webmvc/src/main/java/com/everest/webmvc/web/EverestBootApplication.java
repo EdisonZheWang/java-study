@@ -13,7 +13,7 @@ public class EverestBootApplication {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
         try {
-            tomcat.addWebapp("/", "D:\\Dev\\MyRepo\\spring-framework-study\\webmvc\\target");
+            tomcat.addWebapp("/", "D:\\Dev\\Code\\MyRepo\\java-study\\webmvc\\target");
             tomcat.start();
             tomcat.getServer().await();
         } catch (LifecycleException e) {

@@ -13,7 +13,8 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @author: <a href="mailto:chrdw.p@gmail.com">Edison Zhe Wang</a>
  */
 public class EverestInitializer implements WebApplicationInitializer {
-    @Override public void onStartup(ServletContext servletContext) throws ServletException {
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
         // 手动new一个AnnotationConfigWebApplicationContext，不然无法扫描包，无法把对象置入容器
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(EverestBootConfig.class);
@@ -23,7 +24,7 @@ public class EverestInitializer implements WebApplicationInitializer {
         // 注册DispatcherServlet
         DispatcherServlet dispatcherServlet = new DispatcherServlet(ctx);
         ServletRegistration.Dynamic servletRegistration =
-            servletContext.addServlet("dispatcherServlet", dispatcherServlet);
+                servletContext.addServlet("dispatcherServlet", dispatcherServlet);
         servletRegistration.setLoadOnStartup(1);
         servletRegistration.addMapping("/");
     }

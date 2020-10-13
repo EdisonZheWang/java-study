@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  mysql-5.7.31:
+    container_name: mysql-5.7.31        # 指定容器的名称
+    image: mysql:5.7.31                   # 指定镜像和版本
+    ports:
+      - "3306:3306"
+    restart: always
+    privileged: true
+    environment:
+      MYSQL_ROOT_PASSWORD: qwer
+    volumes:
+      - "/home/chrdw/docker/mysql/data:/var/lib/mysql"           # 挂载数据目录
+      - "/home/chrdw/docker/mysql/my.cfg:/etc/mysql/my.cfg"      # 挂载配置文件目录
