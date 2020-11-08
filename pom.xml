@@ -34,6 +34,9 @@
         <module>mybatis-spring</module>
         <module>fastjson</module>
         <module>mysql</module>
+        <module>redis</module>
+        <module>java-base</module>
+        <module>ssr</module>
     </modules>
     <packaging>pom</packaging>
 
