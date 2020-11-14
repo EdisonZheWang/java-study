@@ -12,5 +12,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: qwer
     volumes:
-      - "/home/chrdw/docker/mysql/data:/var/lib/mysql"           # 挂载数据目录
-      - "/home/chrdw/docker/mysql/my.cfg:/etc/mysql/my.cfg"      # 挂载配置文件目录
+      - ~/dev/docker/mysql/data:/var/lib/mysql           # 挂载数据目录
+      - ~/dev/docker/mysql/my.cfg:/etc/mysql/my.cfg      # 挂载配置文件目录

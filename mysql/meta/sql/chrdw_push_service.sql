@@ -30,7 +30,7 @@ UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id),
 INDEX idx_name(name),
 INDEX idx_address(address1(20), address2(20), address3(20))
-) engine=innodb charset "utf8" comment "the base info of hotel"
+) engine=innodb charset "utf8" comment "the base info of hotel";
 
 CREATE TABLE hotel_location_info(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this hotel",
@@ -46,7 +46,7 @@ PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id),
 UNIQUE uk_latitude_longitude(latitude, longitude)
-) engine=innodb charset "utf8" comment "the location info of hotel"
+) engine=innodb charset "utf8" comment "the location info of hotel";
 
 CREATE TABLE hotel_amenity_info_en_us(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this hotel",
@@ -59,7 +59,7 @@ update_time datetime comment "the update time of this record",
 PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the amenity info of hotel"
+) engine=innodb charset "utf8" comment "the amenity info of hotel";
 
 CREATE TABLE hotel_media_info_en_us(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this media",
@@ -74,7 +74,7 @@ update_time datetime comment "the update time of the record",
 PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the media info of hotel"
+) engine=innodb charset "utf8" comment "the media info of hotel";
 
 CREATE TABLE hotel_media_liink_info(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this media",
@@ -86,7 +86,7 @@ update_time datetime comment "the update time of the record",
 PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the media info of hotel"
+) engine=innodb charset "utf8" comment "the media info of hotel";
 
 CREATE TABLE room_base_info_en_us(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this room",
@@ -103,7 +103,7 @@ PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_room_id(id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the base info of room"
+) engine=innodb charset "utf8" comment "the base info of room";
 
 CREATE TABLE room_amenity_info_en_us(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this hotel",
@@ -118,7 +118,7 @@ PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_room_id(room_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the amenity info of room"
+) engine=innodb charset "utf8" comment "the amenity info of room";
 
 CREATE TABLE room_media_info_en_us(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this media",
@@ -135,7 +135,7 @@ PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_room_id(room_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the media info of room"
+) engine=innodb charset "utf8" comment "the media info of room";
 
 CREATE TABLE room_media_liink_infi(
 logic_id INT(8) AUTO_INCREMENT comment "the logic id of this media",
@@ -149,7 +149,7 @@ PRIMARY KEY pk_id(logic_id),
 UNIQUE uk_room_id(room_id),
 UNIQUE uk_ecom_id(ecom_id),
 UNIQUE uk_hcom_id(hcom_id)
-) engine=innodb charset "utf8" comment "the media info of hotel"
+) engine=innodb charset "utf8" comment "the media info of hotel";
 
 show create TABLE hotel_base_info;
 
